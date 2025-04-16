@@ -20,3 +20,28 @@ p.then(callback) //4rth step : Har promise ".then()" aur ."catch()" return karta
 
 
 //Kabhi socha h agar hum "Promise" ke jagah sirf "promise" likh de to vo ek aam variable ban jaega aur kuch return nhi karega
+
+
+
+
+//fromisified readfile
+
+const making = () => {
+    fs.readFile("./Week -2/Callback Hell/user.txt", "utf-8", function(err, data){
+        if (err) {
+            console.error("Error reading file:", err);
+        } else {
+            console.log("File content:", data);
+        }
+    });
+    
+}
+
+//resolve is a function not a boolean
+const readingFilUsingAsync = () => {
+    return new Promise((resolve)=>{
+         resolve(`file is found`)
+    })
+}
+
+readingFilUsingAsync().then(making)

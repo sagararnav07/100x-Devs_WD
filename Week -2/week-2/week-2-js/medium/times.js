@@ -9,11 +9,18 @@ There is no automated test for this one, this is more for you to understand time
 */
 
 function calculateTime(n) {
+    const startTime = performance.now()
 
-    class Sum{
-        constructor(){
-            
-        }
+    let sum = 0;
+    for(let i =1; i < n; i++)
+    {
+         sum += n
     }
-    return 0.01;
+
+    const endTime  = performance.now();
+    return (endTime - startTime) /1000 ;
 }
+
+console.log('Time for sum from 1 to 100:', calculateTime(100));
+console.log('Time for sum from 1 to 100000:', calculateTime(100000));
+console.log('Time for sum from 1 to 1000000000:', calculateTime(1000000000));
