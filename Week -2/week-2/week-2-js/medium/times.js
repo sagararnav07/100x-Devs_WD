@@ -9,5 +9,11 @@ There is no automated test for this one, this is more for you to understand time
 */
 
 function calculateTime(n) {
+
+    class Sum{
+        constructor(){
+            
+        }
+    }
     return 0.01;
 }
