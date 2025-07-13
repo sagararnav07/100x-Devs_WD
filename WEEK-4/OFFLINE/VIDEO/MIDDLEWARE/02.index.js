@@ -18,7 +18,7 @@ function ticketCheckerMiddleWare(req,res,next){
 //app.use(ticketCheckerMiddleWare) :- you can also use the middleware like this or you can use it individually as shown below calling in individual function
 
 //now the benefit of middleware function is that it can be reused multiple times with much less boilerplate
-app.get('/check', icketCheckerMiddleWaret, function(req,res){
+app.get('/check', ticketCheckerMiddleWareicketCheckerMiddleWaret, function(req,res){
    res.json({msg:`eligible`})
 })
 
