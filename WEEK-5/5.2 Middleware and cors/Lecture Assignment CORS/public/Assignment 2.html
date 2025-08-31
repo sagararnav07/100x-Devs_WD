@@ -1,0 +1,39 @@
+//Write a HTML file, that hits the backend server using the 'fetch' api
+//we are trying to crate a small fullstack application where backend is hosted on a different address and 
+//frontend is hosted on a different address so we are using 'fetch' to send request to the backend server
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="https://cdn.jsdelivr.net/npm/axios@1.6.7/dist/axios.min.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Addition</title>
+
+    <script>
+//We need to launch this html page on a localhost so it can't be done by going live so we serve it over http
+//Steps to do it 1.copy this html page in a public folder   2.cd public -> go into that folder   3.npx serve
+//npx serve command serve a floder on a http, you can also send files using this ho to -44:49 in video
+
+       async function sendRequest(){
+            const a = document.getElementById('a').value;
+            const b = document.getElementById('b').value;
+            const response = await axios.post('http://localhost:3001/sum',
+            {
+                a:a,
+                b:b
+            })
+            console.log(response.data)
+        }
+
+    </script>
+</head>
+<body>
+
+    <input id = 'a' type = 'text' placeholder="First Value"></input>
+    <input id = 'b' type = 'text' placeholder="Second Value"></input>
+
+    <button onclick="sendRequest()">FIND SUM</button>
+    
+</body>
+</html>

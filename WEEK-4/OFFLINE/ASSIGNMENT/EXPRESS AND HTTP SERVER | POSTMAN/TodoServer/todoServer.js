@@ -19,7 +19,7 @@ PORT = 3000
 // Helper function to find the index of a todo item by ID
 function findIndex(arr, id) {
   for (let i = 0; i < arr.length; i++) {
-    if (arr[i].id === id) return i; // Return index if ID matches
+    if (arr[i].id === id) return i; // Return index if ID matchesd
   }
   return -1; // Return -1 if item not found
 }
